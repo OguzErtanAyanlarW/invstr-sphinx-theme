@@ -2133,7 +2133,7 @@ html .md-typeset .superfences-tabs>label:hover{
         display:none
     }
 }
-.centerText {
+.center-text {
     text-align: center !important;
 }
 @media only screen and (max-width:44.9375em){
