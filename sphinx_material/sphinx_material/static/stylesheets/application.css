@@ -2133,6 +2133,9 @@ html .md-typeset .superfences-tabs>label:hover{
         display:none
     }
 }
+.centerText {
+    text-align: center !important;
+}
 @media only screen and (max-width:44.9375em){
     .md-typeset pre{
         margin:1em -.8rem;
