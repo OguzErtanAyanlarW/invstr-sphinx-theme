@@ -119,6 +119,7 @@
  .md-nav__extra_link {
      display: block;
      margin-top: .625em;
+     margin-left: 0.3em;
      transition: color .125s;
      text-overflow: ellipsis;
      cursor: pointer;
