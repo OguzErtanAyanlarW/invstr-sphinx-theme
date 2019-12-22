@@ -7,7 +7,7 @@
             {% set list1 = item.href.split('/') %}
             {% set list2 = pagename.split('/') %}
             {% if ((list1[0] == list2[0]) or (list2|length == 1 and list1|length == 1)) %}
-              <li class="md-tabs__item"><a href="/{{ language }}/{{ current_version }}/{{ item.href }}" class="md-tabs__link">ACTIVE: {{ item.title }}</a></li>
+              <li class="md-tabs__item"><a href="/{{ language }}/{{ current_version }}/{{ item.href }}" class="md-tabs__link--active">{{ item.title }}</a></li>
             {% else %}
               <li class="md-tabs__item"><a href="/{{ language }}/{{ current_version }}/{{ item.href }}" class="md-tabs__link">{{ item.title }}</a></li>
             {%- endif %}
