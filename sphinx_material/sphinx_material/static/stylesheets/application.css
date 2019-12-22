@@ -2543,9 +2543,6 @@ html .md-typeset .superfences-tabs>label:hover{
         left:0;
         margin:0
     }
-    .md-tabs{
-        display:none
-    }
 }
 @media only screen and (min-width:60em){
     .md-content{
