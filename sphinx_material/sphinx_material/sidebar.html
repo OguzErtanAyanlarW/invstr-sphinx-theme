@@ -9,6 +9,7 @@
     </a>
     {% set pagenameSplot = pagename.split('/') %}
     {% set categoryTitle = pagenameSplot[0] %}
+    {% if realTitle in theme_toc_category_title %}
     {% set realTitle = theme_toc_category_title[categoryTitle] %}
     <a href="/"
        title="{{ theme_toc_category_title[categoryTitle] }}">{{ categoryTitle }}</a>
