@@ -26,7 +26,7 @@
         <a href="{{ item.href|e }}" class="md-nav__link{% if item.current %} md-nav__link--active{% endif %}">else list1 0: {{ (list1[0]|string()) }}</a>
         <a href="{{ item.href|e }}" class="md-nav__link{% if item.current %} md-nav__link--active{% endif %}">else list2: {{ list2 }}</a>
         <a href="{{ item.href|e }}" class="md-nav__link{% if item.current %} md-nav__link--active{% endif %}">else list2 0: {{ (list2[0]|string()) }}</a>
-        <a href="{{ item.href|e }}" class="md-nav__link{% if item.current %} md-nav__link--active{% endif %}">else comparison: {{ ((list1[0]|string() == list2[0]|string()) }}</a>
+        <a href="{{ item.href|e }}" class="md-nav__link{% if item.current %} md-nav__link--active{% endif %}">else comparison: {{ (list1[0]|string() == list2[0]|string()) }}</a>
       {%- endif %}
       {% if item.current %}
         {%- set sphinx_material_include_searchbox=False %}
