@@ -5,7 +5,7 @@
         {%- for item in theme_nav_links %}
             {% set localhref=pathto( item.href ) if item.internal else item.href|e %}
             {% if item.href.split('/')[1] == pagename.split('/')[1] %}
-              <li class="md-tabs__item"><a href="{{ item.href }}" class="md-tabs__link">ACTIVE: {{ item.title }}</a></li>
+              <li class="md-tabs__item"><a href="{{ language }} {{ version }} {{ currentversion }} {{ html_language }}" class="md-tabs__link">ACTIVE: {{ item.title }}</a></li>
             {% else %}
               <li class="md-tabs__item"><a href="{{ item.href }}" class="md-tabs__link">{{ item.title }}</a></li>
             {%- endif %}
