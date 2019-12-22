@@ -9,8 +9,8 @@
     </a>
     {% set pagenameSplot = pagename.split('/') %}
     {% set categoryTitle = pagenameSplot[0] %}
-    {% if categoryTitle in theme_toc_category_title %}
-      {% set realTitle = theme_toc_category_title[categoryTitle] %}
+    {% if categoryTitle.strip() in theme_toc_category_title %}
+      {% set realTitle = theme_toc_category_title[categoryTitle.strip()] %}
         <a href="/" title="{{ theme_toc_category_title[categoryTitle] }}">{{ categoryTitle }}</a>
         <a href="/" title="{{ theme_toc_category_title[categoryTitle] }}">{{ theme_toc_category_title }}</a>
         <a href="/" title="{{ realTitle }}">{{ realTitle }}</a>
