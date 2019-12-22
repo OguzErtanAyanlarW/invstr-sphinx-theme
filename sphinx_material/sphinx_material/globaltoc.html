@@ -11,7 +11,7 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     <label class="md-nav__link md-nav__link--active" for="__toc"> {{ item.contents }} </label>
     {% endif %}
-      {% if ((item.href.split('/')|length == 1) %}
+      {% if (item.href.split('/')|length == 1) %}
         <a href="{{ item.href|e }}" class="md-nav__link{% if item.current %} md-nav__link--active{% endif %}">{{ item.contents }}</a>
       {%- endif %}
       {% if item.current %}
