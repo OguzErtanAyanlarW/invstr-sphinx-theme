@@ -9,9 +9,11 @@
     <li class="md-nav__item">
     {% if item.current %}
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    <label class="md-nav__link md-nav__link--active" for="__toc"> ITEM: {{ item }} </label>
+    <label class="md-nav__link md-nav__link--active" for="__toc"> {{ item.contents }} </label>
     {% endif %}
-      <a href="{{ item.href|e }}" class="md-nav__link{% if item.current %} md-nav__link--active{% endif %}">{{ item.contents }}</a>
+      <a href="{{ item.href|e }}" class="md-nav__link{% if item.current %} md-nav__link--active{% endif %}">Item Contents: {{ item.contents }}</a>
+      <a href="{{ item.href|e }}" class="md-nav__link{% if item.current %} md-nav__link--active{% endif %}">Item: {{ item }}</a>
+      <a href="{{ item.href|e }}" class="md-nav__link{% if item.current %} md-nav__link--active{% endif %}">Item Current: {{ item.current }}</a>
       {% if item.current %}
         {%- set sphinx_material_include_searchbox=False %}
         {% include "localtoc.html" %}{% endif %}
