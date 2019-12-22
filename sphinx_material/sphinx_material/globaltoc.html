@@ -11,16 +11,8 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     <label class="md-nav__link md-nav__link--active" for="__toc"> {{ item.contents }} </label>
     {% endif %}
-      {% set list1 = pagename.split('/') %}
-      {% set list2 = item.href.split('/') %}
-      {% if (list2|length == 1) %}
-        <a href="{{ item.href|e }}" class="md-nav__link{% if item.current %} md-nav__link--active{% endif %}">Item Contents: {{ item.contents }}</a>
-        <a href="{{ item.href|e }}" class="md-nav__link{% if item.current %} md-nav__link--active{% endif %}">Item: {{ item }}</a>
-        <a href="{{ item.href|e }}" class="md-nav__link{% if item.current %} md-nav__link--active{% endif %}">Item Current: {{ item.current }}</a>
-        <a href="{{ item.href|e }}" class="md-nav__link{% if item.current %} md-nav__link--active{% endif %}">pagename: {{ pagename }}</a>
-        <a href="{{ item.href|e }}" class="md-nav__link{% if item.current %} md-nav__link--active{% endif %}">item.href: {{ item.href}}</a>
-        <a href="{{ item.href|e }}" class="md-nav__link{% if item.current %} md-nav__link--active{% endif %}">list1: {{ list1 }}</a>
-        <a href="{{ item.href|e }}" class="md-nav__link{% if item.current %} md-nav__link--active{% endif %}">list2: {{ list2 }}</a>
+      {% if ((item.href.split('/')|length == 1) %}
+        <a href="{{ item.href|e }}" class="md-nav__link{% if item.current %} md-nav__link--active{% endif %}">{{ item.contents }}</a>
       {%- endif %}
       {% if item.current %}
         {%- set sphinx_material_include_searchbox=False %}
