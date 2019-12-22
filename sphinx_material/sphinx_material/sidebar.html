@@ -11,10 +11,10 @@
     {% set categoryTitle = pagename.split('/')[0].strip() %}
     {% if categoryTitle in theme_sidebar_title %}
     {% set categoryFound = theme_sidebar_title[categoryTitle] %}
-      <a href="{{ categoryFound.href }}" title="{{ categoryFound.title }}">{{ categoryFound.title }}</a>
+      <a href="/{{ language }}/{{ current_version }}/{{ categoryFound.href }}" title="{{ categoryFound.title }}">{{ categoryFound.title }}</a>
     {% else %}
     {% set categoryFound = theme_sidebar_title['index'] %}
-      <a href="{{ categoryFound.href }}" title="{{ categoryFound.title }}">{{ categoryFound.title }}</a>
+      <a href="/{{ language }}/{{ current_version }}/{{ categoryFound.href }}" title="{{ categoryFound.title }}">{{ categoryFound.title }}</a>
     {% endif %}
   </label>
   {%- if theme_repo_url %}
