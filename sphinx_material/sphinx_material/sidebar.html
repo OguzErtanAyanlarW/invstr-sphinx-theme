@@ -10,13 +10,13 @@
     {% set pagenameSplot = pagename.split('/') %}
     {% set categoryTitle = pagenameSplot[0] %}
     {% if categoryTitle in theme_toc_category_title %}
-    {% set realTitle = theme_toc_category_title[categoryTitle] %}
-    <a href="/"
-       title="{{ theme_toc_category_title[categoryTitle] }}">{{ categoryTitle }}</a>
-    <a href="/"
-       title="{{ theme_toc_category_title[categoryTitle] }}">{{ theme_toc_category_title }}</a>
-    <a href="/"
-       title="{{ realTitle }}">{{ realTitle }}</a>
+      {% set realTitle = theme_toc_category_title[categoryTitle] %}
+        <a href="/" title="{{ theme_toc_category_title[categoryTitle] }}">{{ categoryTitle }}</a>
+        <a href="/" title="{{ theme_toc_category_title[categoryTitle] }}">{{ theme_toc_category_title }}</a>
+        <a href="/" title="{{ realTitle }}">{{ realTitle }}</a>
+    {% else %}
+      <a href="/" title="{{ theme_toc_category_title[categoryTitle] }}">NOT IN {{ categoryTitle }}</a>
+      <a href="/" title="{{ theme_toc_category_title[categoryTitle] }}">NOT IN {{ theme_toc_category_title }}</a>
     {% endif %}
   </label>
   {%- if theme_repo_url %}
