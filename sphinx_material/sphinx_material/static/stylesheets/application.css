@@ -2754,9 +2754,10 @@ html .md-typeset .superfences-tabs>label:hover{
         transform-style:preserve-3d;
         vertical-align:-.125em
     }
-    .md-nav__item--nested .md-nav__toggle:checked~.md-nav__link:after{
-        -webkit-transform:rotateX(180deg);
-        transform:rotateX(180deg)
+    .js .md-nav__item--nested>.md-nav__link:after{
+        transition:-webkit-transform .4s;
+        transition:transform .4s;
+        transition:transform .4s,-webkit-transform .4s
     }
     .md-search__inner{
         margin-right:1.2rem
