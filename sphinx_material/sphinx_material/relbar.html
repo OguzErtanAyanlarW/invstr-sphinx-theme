@@ -4,7 +4,7 @@
       <ul class="md-tabs__list">
         {%- for item in theme_nav_links %}
             {% set localhref=pathto( item.href ) if item.internal else item.href|e %}
-            {% if ((item.href.split('/')[0] == pagename.split('/')[0]) or (pagename.split('/')|length = 1 and item.href.split('/')|length = 1)) %}
+            {% if ((item.href.split('/')[0] == pagename.split('/')[0]) or ((pagename.split('/'))|length = 1 and (item.href.split('/'))|length = 1)) %}
               <li class="md-tabs__item"><a href="/{{ language }}/{{ current_version }}/{{ item.href }}" class="md-tabs__link">ACTIVE: {{ item.title }}</a></li>
             {% else %}
               <li class="md-tabs__item"><a href="/{{ language }}/{{ current_version }}/{{ item.href }}" class="md-tabs__link">{{ item.title }}</a></li>
