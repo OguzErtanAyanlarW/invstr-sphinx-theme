@@ -7,7 +7,7 @@
           {% if theme_logo_icon|e %}
             <i class="md-icon">{{ theme_logo_icon }}</i>
           {% elif theme_logo %}
-              <img src="{{ theme_logo }}" height="26"
+              <img src="{{ pathto(theme_logo, 1) }}" height="26"
                    alt="{{ shorttitle }} logo">
           {% else %}
             &nbsp; <i class="md-icon">else</i>
