@@ -3,7 +3,7 @@
     <div class="md-tabs__inner md-grid">
       <ul class="md-tabs__list">
         {%- for item in theme_nav_links %}
-            {% set localhref=pathto( item.href ) if item.internal else item.href|e %}
+            {% set localhref=pathto( item.href, 1) if item.internal else item.href|e %}
             <li class="md-tabs__item"><a href="{{ localhref }}" class="md-tabs__link">{{ item.title }}</a></li>
         {%- endfor %}
         {%- for parent in parents %}
