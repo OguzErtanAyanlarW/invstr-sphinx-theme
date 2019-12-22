@@ -9,12 +9,8 @@
     </a>
     {% set pagenameSplot = pagename.split('/') %}
     {% set categoryTitle = pagename.split('/')[0].strip() %}
-    {% if categoryTitle in theme_sidebar_title %}
-      {% set realTitle = theme_sidebar_title[categoryTitle] %}
-        <a href="/" title="{{ realTitle }}">{{ realTitle }}</a>
-    {% else %}
-      <a href="/" title="FUCK">{{ categoryTitle }} IS NOT IN {{ theme_sidebar_title }}</a>
-    {% endif %}
+    {% set categoryFound = theme_sidebar_title[categoryTitle] %}
+      <a href="{{ categoryFound.href }}" title="{{ categoryFound.title }}">{{ categoryFound.title }}</a>
   </label>
   {%- if theme_repo_url %}
     <div class="md-nav__source">
