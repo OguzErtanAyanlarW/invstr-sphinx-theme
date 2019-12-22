@@ -1,8 +1,5 @@
 <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    {% set pagenameSplot = pagename.split('/') %}
-    {% set categoryTitle = pagenameSplot[0] %}
-    {% set realTitle = theme_toc_category_title[categoryTitle] %}
     <a href="/" title="{{ docstitle }}" class="md-nav__button md-logo">
       {% if theme_logo_icon %}
         <i class="md-icon">{{ theme_logo_icon }}</i>
@@ -10,6 +7,13 @@
         <img src="{{ pathto(theme_logo, 1) }}" alt="{{ html_title }} logo" width="48" height="48">
       {% endif %}
     </a>
+    {% set pagenameSplot = pagename.split('/') %}
+    {% set categoryTitle = pagenameSplot[0] %}
+    {% set realTitle = theme_toc_category_title[categoryTitle] %}
+    <a href="/"
+       title="{{ theme_toc_category_title[categoryTitle] }}">{{ categoryTitle }}</a>
+    <a href="/"
+       title="{{ theme_toc_category_title[categoryTitle] }}">{{ theme_toc_category_title }}</a>
     <a href="/"
        title="{{ realTitle }}">{{ realTitle }}</a>
   </label>
