@@ -13,7 +13,7 @@
     {% endif %}
       {% set list1 = pagename.split('/') %}
       {% set list2 = item.href.split('/') %}
-      {% if list1[0] == list2[0] %}
+      {% if ((list1[0] == list2[0]) or (list1|length == 1 and list2|length == 1)) %}
         <a href="{{ item.href|e }}" class="md-nav__link{% if item.current %} md-nav__link--active{% endif %}">Item Contents: {{ item.contents }}</a>
         <a href="{{ item.href|e }}" class="md-nav__link{% if item.current %} md-nav__link--active{% endif %}">Item: {{ item }}</a>
         <a href="{{ item.href|e }}" class="md-nav__link{% if item.current %} md-nav__link--active{% endif %}">Item Current: {{ item.current }}</a>
